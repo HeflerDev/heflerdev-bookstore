@@ -8,8 +8,6 @@ const mapStateToProps = state => ({ books: state.books });
 const select = dispatch => ({ removeBook: book => dispatch(removeBook(book)) });
 
 const ConnectedBookList = ({ books, removeBook }) => {
-  // const { id, title } = books;
-
   const handleClick = event => {
     event.preventDefault();
     const bookId = event.target.id;

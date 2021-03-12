@@ -5,7 +5,7 @@ function booksReducer(state = { books: [] }, action) {
     case ADD_BOOK:
       return { books: [...state.books, action.payload] };
     case REMOVE_BOOK:
-      return state;
+      return { books: state.books.filter(item => action.payload.bookId !== item.id.toString()) };
     default:
       return state;
   }

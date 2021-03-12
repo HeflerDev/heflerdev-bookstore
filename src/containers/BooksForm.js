@@ -20,8 +20,15 @@ const bookCategories = [
 const ConnectedForm = props => {
   const [state, setState] = useState({
     title: '',
-    category: '',
+    category: 'Action',
   });
+
+  const handleValidation = () => {
+    if (state.title === '') {
+      return false;
+    }
+    return true;
+  };
 
   const handleChange = event => {
     switch (event.target.id) {
@@ -43,18 +50,20 @@ const ConnectedForm = props => {
   };
 
   const handleSubmit = event => {
-    event.preventDefault();
-    const { title, category } = state;
-    props.addBook({
-      title,
-      category,
-      id: Math.floor(Math.random() * (10000 - 100) + 10000),
-    });
-    setState({
-      id: null,
-      title: '',
-      category: 'Action',
-    });
+    if (handleValidation()) {
+      event.preventDefault();
+      const { title, category } = state;
+      props.addBook({
+        title,
+        category,
+        id: Math.floor(Math.random() * (10000 - 100) + 10000),
+      });
+      setState({
+        id: null,
+        title: '',
+        category,
+      });
+    }
   };
 
   const { title } = state;

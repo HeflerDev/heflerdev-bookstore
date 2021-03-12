@@ -7,8 +7,8 @@ const Book = ({ books }) => {
     return (
       <>
         <td key={id}>{ id }</td>
-        <td key={id + title}>{ title }</td>
-        <td key={id + category}>{ category }</td>
+        <td key={`${id}-${title}`}>{ title }</td>
+        <td key={`${id}-${category}`}>{ category }</td>
       </>
     );
   }
@@ -16,10 +16,10 @@ const Book = ({ books }) => {
 };
 
 Book.propTypes = {
-  books: PropTypes.objectOf({
-    id: PropTypes.number,
-    title: PropTypes.string,
-    category: PropTypes.string,
+  books: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
   }).isRequired,
 };
 

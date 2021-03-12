@@ -8,30 +8,33 @@ const mapStateToProps = state => ({ books: state.books });
 const select = dispatch => ({ removeBook: book => dispatch(removeBook(book)) });
 
 const ConnectedBookList = ({ books, removeBook }) => {
-  const { id, title } = books;
+  // const { id, title } = books;
 
   const handleClick = event => {
     event.preventDefault();
-    const bookObj = event.target.value;
-    removeBook(bookObj);
+    const bookId = event.target.id;
+    removeBook({ bookId });
   };
 
   return (
     <>
       <table>
         {
-          books.map(item => (
-            <tbody key={title}>
-              <tr>
-                <Book books={item} />
-                <td>
-                  <button type="button" onClick={handleClick} id={id} value={item}>
-                    Delete
-                  </button>
-                </td>
-              </tr>
-            </tbody>
-          ))
+          books.map(item => {
+            const { id, title } = item;
+            return (
+              <tbody key={title}>
+                <tr>
+                  <Book books={item} />
+                  <td>
+                    <button type="button" onClick={handleClick} id={id}>
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            );
+          })
         }
       </table>
     </>
@@ -39,7 +42,7 @@ const ConnectedBookList = ({ books, removeBook }) => {
 };
 
 ConnectedBookList.propTypes = {
-  books: PropTypes.objectOf(PropTypes.string).isRequired,
+  books: PropTypes.arrayOf(PropTypes.object).isRequired,
   removeBook: PropTypes.func.isRequired,
 };
 

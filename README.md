@@ -41,9 +41,6 @@ To get a local copy up and running follow these simple example steps.
 ### Usage
 * Start the development server<br>
 `npm start`
-### Run tests
-* The project uses Jest to track the test suites. To check it, run:<br>
-`npm test`
 ### Deployment
 * Run:<br>
 `npm build` 

@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
@@ -29,7 +28,7 @@ const ConnectedCategoryFilter = ({ books, filterBook }) => {
 };
 
 ConnectedCategoryFilter.propTypes = {
-  books: PropTypes.array.isRequired,
+  books: PropTypes.arrayOf(PropTypes.object).isRequired,
   filterBook: PropTypes.func.isRequired,
 };
 

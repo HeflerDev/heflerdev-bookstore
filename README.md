@@ -21,7 +21,7 @@ If you have trouble with your books, this app is the solution! Organizing and ma
 
 ## Live Demo
 
-[Live Demo Link](https://60484bb9bed0cf646eebddf2--heflerdevbookstore.netlify.app/)
+[Live Demo Link](https://kind-meninsky-9eb220.netlify.app/)
 
 
 ## Getting Started
@@ -41,9 +41,6 @@ To get a local copy up and running follow these simple example steps.
 ### Usage
 * Start the development server<br>
 `npm start`
-### Run tests
-* The project uses Jest to track the test suites. To check it, run:<br>
-`npm test`
 ### Deployment
 * Run:<br>
 `npm build` 
@@ -61,7 +58,7 @@ To get a local copy up and running follow these simple example steps.
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](issues/).
+Feel free to check the [issues page](https://github.com/HeflerDev/heflerdev-bookstore/issues).
 
 ## Show your support
 
@@ -69,4 +66,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT](lic.url) licensed.
+This project is [MIT](https://opensource.org/licenses/MIT) licensed.

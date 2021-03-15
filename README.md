@@ -21,7 +21,7 @@ If you have trouble with your books, this app is the solution! Organizing and ma
 
 ## Live Demo
 
-[Live Demo Link](https://60484bb9bed0cf646eebddf2--heflerdevbookstore.netlify.app/)
+[Live Demo Link](https://kind-meninsky-9eb220.netlify.app/)
 
 
 ## Getting Started

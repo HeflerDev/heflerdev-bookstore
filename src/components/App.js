@@ -4,12 +4,12 @@ import BookForm from '../containers/BooksForm';
 import CategoryFilter from '../containers/CategoryFilter';
 
 const App = () => (
-  <>
-    <h1> BookList </h1>
+  <div className="stack">
+    <h1> The Reader&apos;s Emporium  </h1>
     <BookList />
     <BookForm />
     <CategoryFilter />
-  </>
+  </div>
 );
 
 export default App;

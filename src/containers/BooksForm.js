@@ -68,29 +68,27 @@ const ConnectedForm = props => {
 
   const { title } = state;
   return (
-    <form onSubmit={handleSubmit}>
-      <h2> Form </h2>
-      <div>
-        <label htmlFor="title">
-          Title
-          <input type="text" id="title" value={title} onChange={handleChange} />
-        </label>
+    <form onSubmit={handleSubmit} className="stack">
+      <h2> Add New Book </h2>
+      <div className="board">
+        <div className="col-12 col-m-6">
+          <label htmlFor="title">
+            <input type="text" id="title" value={title} onChange={handleChange} />
+          </label>
+        </div>
+        <div className="col-12 col-m-4">
+          <label htmlFor="category" className="queue around dropdown">
+            <select id="category" className="dropdown-menu" onChange={handleChange}>
+              {
+                bookCategories.map(cat => (
+                  <option key={cat} value={cat}>{ cat }</option>
+                ))
+              }
+            </select>
+          </label>
+        </div>
+        <button type="submit" className="col-12 col-m-2 submit-btn">Save</button>
       </div>
-
-      <div>
-        <label htmlFor="category">
-          Category
-          <select id="category" onChange={handleChange}>
-            {
-              bookCategories.map(cat => (
-                <option key={cat} value={cat}>{ cat }</option>
-              ))
-            }
-          </select>
-        </label>
-      </div>
-
-      <button type="submit">Save</button>
     </form>
   );
 };

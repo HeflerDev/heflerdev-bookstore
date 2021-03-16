@@ -2,6 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Book from '../components/Book';
+import BookStatus from '../components/BookStatus';
+import BookInfo from '../components/BookInfo';
 import { removeBook } from '../actions/index';
 
 const mapStateToProps = state => ({
@@ -19,28 +21,43 @@ const ConnectedBookList = ({ books, filter, removeBook }) => {
 
   return (
     <>
-      <table>
+      <div className="stack">
         {
           books.map(item => {
             const { id, title, category } = item;
             if (filter === category || filter === 'All') {
               return (
-                <tbody key={title}>
-                  <tr>
-                    <Book books={item} />
-                    <td>
-                      <button type="button" onClick={handleClickOnDeleteButton} id={id}>
+
+                <div key={title} className="board col-12">
+                  <div className="board col-12 col-m-6 col-l-4">
+                    <div className="col-12">
+                      <Book books={item} />
+                    </div>
+                    <div className="col-12 queue">
+                      <button className="book-btn" type="button" onClick={handleClickOnDeleteButton} id={id}>
+                        Comments
+                      </button>
+                      <button className="book-btn" type="button" onClick={handleClickOnDeleteButton} id={id}>
                         Delete
                       </button>
-                    </td>
-                  </tr>
-                </tbody>
+                      <button className="book-btn" type="button" onClick={handleClickOnDeleteButton} id={id}>
+                        Edit
+                      </button>
+                    </div>
+                  </div>
+                  <div className="col-12 col-m-6 col-l-4 bookstatus-big-container">
+                    <BookStatus />
+                  </div>
+                  <div className="col-12 col-l-4">
+                    <BookInfo />
+                  </div>
+                </div>
               );
             }
             return null;
           })
         }
-      </table>
+      </div>
     </>
   );
 };

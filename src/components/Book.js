@@ -5,11 +5,10 @@ const Book = ({ books }) => {
   const { id, title, category } = books;
   if (id !== null) {
     return (
-      <>
-        <td key={id}>{ id }</td>
-        <td key={`${id}-${title}`}>{ title }</td>
-        <td key={`${id}-${category}`}>{ category }</td>
-      </>
+      <div className="queue column">
+        <div className="book-prop" key={`${id}-${title}`}>{ title }</div>
+        <div className="book-prop" key={`${id}-${category}`}>{ category }</div>
+      </div>
     );
   }
   return null;

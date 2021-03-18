@@ -1,3 +1,303 @@
-body {
-  color: black;
+@import './percentageCircle.css';
+
+:root {
+  --font-size-mobile-sm: 0.35rem;
+  --font-size-mobile-md: 0.5rem;
+  --font-size-mobile-lg: 1rem;
+  --color-azure: #0290ff;
+  --color-cool-blue: #4386bf;
+  --color-soft-gray: #e8e8e8;
+  --color-gray: #c7c7c7;
+  --color-pale-gray: #f5f6fa;
+  --color-dark-gray: rgba(0, 0, 0, 0.5);
+  --color-black-two: #121212;
+  --color-warm-gray: #888;
+  --color-pinkish-gray: #c4c4c4;
+}
+
+html {
+  min-height: 100vh;
+  background-color: var(--color-soft-gray);
+}
+
+main {
+  background-color: var(--color-soft-gray);
+  padding: 0 !important;
+}
+
+nav {
+  padding: 1rem;
+  margin: 0;
+  background-color: white;
+  border-bottom: solid var(--color-soft-gray) 3px;
+}
+
+h1 {
+  font-size: var(--font-size-mobile-lg);
+  margin: 0;
+}
+
+h2 {
+  font-size: var(--font-size-mobile-md);
+  color: var(--color-warm-gray);
+}
+
+hr {
+  border-top: solid var(--color-soft-gray) 1px;
+  width: 95%;
+}
+
+form,
+label,
+input {
+  width: 100%;
+  font-size: var(--font-size-mobile-sm);
+}
+
+form label input,
+select {
+  color: var(--color-pinkish-gray);
+  border: solid var(--color-soft-gray) 1px;
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+}
+
+input::placeholder {
+  color: var(--color-soft-gray);
+}
+
+label {
+  margin: 0;
+}
+
+.book-prop {
+  text-align: left;
+}
+
+.category-filter {
+  border: none;
+}
+
+.profile-thumb {
+  border: solid var(--color-soft-gray) 1px;
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+  color: var(--color-azure);
+  background: url('https://api.iconify.design/bx:bxs-user.svg?color=%230290FF') no-repeat center center / contain;
+}
+
+.update-btn {
+  background-color: var(--color-azure);
+  color: white;
+  border: none;
+  border-radius: 3px;
+}
+
+.book-prop-category {
+  font-size: var(--font-size-mobile-sm);
+  color: var(--color-dark-gray) !important;
+}
+
+.book-btn {
+  font-size: var(--font-size-mobile-sm);
+  margin: 0;
+  padding: 0 0.2rem 0 0;
+  background: none;
+  border: none;
+}
+
+.book-status-container {
+  font-size: var(--font-size-mobile-sm);
+}
+
+.bookinfo-container {
+  font-size: var(--font-size-mobile-sm);
+}
+
+.book-prop-author {
+  font-size: 1rem !important;
+  color: var(--color-cool-blue);
+}
+
+.percentage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  text-align: left;
+}
+
+.percentage div {
+  font-size: 1.2rem;
+  color: #121212;
+  opacity: 0.5;
+}
+
+.percentage div:first-child {
+  font-size: 3rem;
+}
+
+#categories {
+  width: 100%;
+}
+
+#root: {
+  width: 100%;
+}
+
+@media screen and (min-device-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  label,
+  input {
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  .dropdown {
+    margin: 0;
+    padding: 0;
+  }
+
+  .dropdown-menu {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .submit-btn {
+    font-size: 1rem;
+  }
+
+  .book-prop {
+    font-size: 1rem;
+  }
+
+  .book-btn {
+    font-size: 1rem;
+  }
+
+  .bookinfo-container {
+    font-size: 1rem;
+  }
+
+  .bookstatus-big-container {
+    font-size: 1rem;
+    margin: auto;
+  }
+
+  .book-status-container {
+    font-size: 1rem;
+  }
+
+  #categories {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-device-width: 1024px) {
+  h1 {
+    font-size: 3rem;
+    color: var(--color-azure);
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 2rem;
+  }
+
+  hr {
+    border-top: solid var(--color-soft-gray) 1px;
+    width: 95%;
+  }
+
+  label,
+  input {
+    font-size: 2rem;
+  }
+
+  select {
+    margin: auto;
+  }
+
+  form button {
+    background-color: var(--color-azure);
+    color: white;
+    border: none;
+    border-radius: 3px;
+  }
+
+  nav {
+    padding: 0.5rem 6rem !important;
+  }
+
+  .bookinfo-container div {
+    margin: auto;
+    text-align: left;
+    font-size: 1.35rem;
+  }
+
+  nav:first-child div {
+    margin: auto 2rem;
+  }
+
+  .closure {
+    background-color: var(--color-pale-gray);
+    padding: 0 1rem;
+    margin: 0 3rem;
+    box-shadow: 20px 20px 30px 0 rgba(50, 50, 50, 0.3);
+  }
+
+  .book-prop {
+    font-size: 2rem;
+  }
+
+  .book-prop-category {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  .book-btn {
+    font-size: 1rem;
+    color: var(--color-cool-blue);
+  }
+
+  .book-btn-separator {
+    color: var(--color-soft-gray);
+    font-weight: bold;
+    margin: 0 0.2rem;
+  }
+
+  .bookinfo-container {
+    margin: auto;
+    width: 60%;
+    height: 100%;
+  }
+
+  .bookinfo-parent {
+    border-left: solid var(--color-soft-gray) 1px;
+  }
+
+  .bookinfo-container div:first-child {
+    color: var(--color-gray);
+  }
+
+  .book-container {
+    padding: 2rem;
+  }
+
+  #categories {
+    border: none;
+    margin: auto 0;
+  }
 }

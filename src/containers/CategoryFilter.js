@@ -14,7 +14,7 @@ const ConnectedCategoryFilter = ({ books, filterBook }) => {
   };
 
   return (
-    <form>
+    <div>
       <select id="categories" onChange={handleChange}>
         <option value="All">All</option>
         {
@@ -23,7 +23,7 @@ const ConnectedCategoryFilter = ({ books, filterBook }) => {
           ))
         }
       </select>
-    </form>
+    </div>
   );
 };
 

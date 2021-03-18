@@ -13,6 +13,7 @@
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-pie-progressbar": "^0.6.8",
     "react-redux": "^7.2.2",
     "react-scripts": "4.0.3",
     "redux": "^4.0.5",

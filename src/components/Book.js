@@ -6,8 +6,8 @@ const Book = ({ books }) => {
   if (id !== null) {
     return (
       <div className="queue column">
-        <div className="book-prop" key={`${id}-${title}`}>{ title }</div>
-        <div className="book-prop" key={`${id}-${category}`}>{ category }</div>
+        <div className="book-prop book-prop-category" key={`${id}-${category}`}>{ category }</div>
+        <div className="book-prop book-prop-title" key={`${id}-${title}`}>{ title }</div>
       </div>
     );
   }

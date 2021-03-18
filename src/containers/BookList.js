@@ -28,7 +28,7 @@ const ConnectedBookList = ({ books, filter, removeBook }) => {
             if (filter === category || filter === 'All') {
               return (
 
-                <div key={title} className="board col-12">
+                <div key={title} className="board col-12 book-container">
                   <div className="board col-12 col-m-6 col-l-4">
                     <div className="col-12">
                       <Book books={item} />
@@ -37,9 +37,15 @@ const ConnectedBookList = ({ books, filter, removeBook }) => {
                       <button className="book-btn" type="button" onClick={handleClickOnDeleteButton} id={id}>
                         Comments
                       </button>
+                      <div className="book-btn-separator">
+                        {' | '}
+                      </div>
                       <button className="book-btn" type="button" onClick={handleClickOnDeleteButton} id={id}>
                         Delete
                       </button>
+                      <div className="book-btn-separator">
+                        {' | '}
+                      </div>
                       <button className="book-btn" type="button" onClick={handleClickOnDeleteButton} id={id}>
                         Edit
                       </button>
@@ -48,7 +54,7 @@ const ConnectedBookList = ({ books, filter, removeBook }) => {
                   <div className="col-12 col-m-6 col-l-4 bookstatus-big-container">
                     <BookStatus />
                   </div>
-                  <div className="col-12 col-l-4">
+                  <div className="bookinfo-parent col-12 col-l-4">
                     <BookInfo />
                   </div>
                 </div>

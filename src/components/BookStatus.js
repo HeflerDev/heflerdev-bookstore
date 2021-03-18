@@ -1,14 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import CircularProgressbar from 'react-pie-progressbar';
 
 const BookStatus = ({ completed }) => (
   <>
-    <div className="board book-status-container">
-      <div className="percentage-circle col-6">
-        <div>Perc</div>
+    <div className="board center book-status-container end">
+      <div className="col-12 col-l-3 circle-wrapper">
+        <CircularProgressbar
+          percentage={completed}
+          initialAnimation
+        />
       </div>
-      <div className="percentage col-6">
-        <div>{ completed }</div>
+      <div className="percentage col-l-4">
+        <div>{ `${completed}%` }</div>
         <div>Completed</div>
       </div>
     </div>
@@ -20,7 +24,7 @@ BookStatus.propTypes = {
 };
 
 BookStatus.defaultProps = {
-  completed: '0%',
+  completed: 10,
 };
 
 export default BookStatus;

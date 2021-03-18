@@ -70,13 +70,13 @@ const ConnectedForm = props => {
   return (
     <form onSubmit={handleSubmit} className="stack">
       <h2> Add New Book </h2>
-      <div className="board">
-        <div className="col-12 col-m-6">
+      <div className="board between">
+        <div className="col-12 col-m-4">
           <label htmlFor="title">
-            <input type="text" id="title" value={title} onChange={handleChange} />
+            <input type="text" placeholder="Book Title" id="title" value={title} onChange={handleChange} />
           </label>
         </div>
-        <div className="col-12 col-m-4">
+        <div className="col-12 col-m-3">
           <label htmlFor="category" className="queue around dropdown">
             <select id="category" className="dropdown-menu" onChange={handleChange}>
               {

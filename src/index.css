@@ -115,6 +115,11 @@ label {
   font-size: var(--font-size-mobile-sm);
 }
 
+.book-prop-author {
+  font-size: 1rem !important;
+  color: var(--color-cool-blue);
+}
+
 .percentage {
   display: flex;
   flex-direction: column;
@@ -124,7 +129,9 @@ label {
 }
 
 .percentage div {
-  font-size: 1rem;
+  font-size: 1.2rem;
+  color: #121212;
+  opacity: 0.5;
 }
 
 .percentage div:first-child {

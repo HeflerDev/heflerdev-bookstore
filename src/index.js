@@ -6,6 +6,16 @@ import store from './store/index';
 import 'csstack';
 import './index.css';
 
+store.dispatch({
+  type: 'ADD_BOOK',
+  payload: {
+    id: '001',
+    title: 'Moby Dick',
+    category: 'Action',
+    author: 'Herman Melville',
+  },
+});
+
 ReactDOM.render(
   <Provider store={store}>
     <App />

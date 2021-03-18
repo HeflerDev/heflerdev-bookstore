@@ -57,6 +57,7 @@ const ConnectedForm = props => {
         title,
         category,
         id: Math.floor(Math.random() * (10000 - 100) + 10000),
+        author: 'Mock Author',
       });
       setState({
         id: null,
